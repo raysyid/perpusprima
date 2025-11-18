@@ -14,7 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         // alias middleware custom
         $middleware->alias([
-            'dummy.jwt' => \App\Http\Middleware\DummyJwtMiddleware::class,
+            'dummyAuth' => \App\Http\Middleware\DummyAuth::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
